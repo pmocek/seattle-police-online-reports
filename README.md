@@ -12,8 +12,6 @@ Department of Information Technology.  Attached is a copy of the source code
 with redactions made in accordance with [RCW 42.56.420(4)][2]."
 
 
-References:
-
  [1]: <http://www.seattle.gov/police/records/>
       (Seattle Police Department: View Police Reports Online)
  [2]: <http://apps.leg.wa.gov/rcw/default.aspx?cite=42.56.420>
