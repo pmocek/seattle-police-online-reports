@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b826099-c918-4f6a-8fcb-c5bd6f42dc0a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55608/PoliceReport.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PoliceReport3.xsd" MetadataType="Schema" ID="5812704a-eccc-4eba-8e9e-6d4d59b14afb" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?xsd=xsd1" />
+    <MetadataFile FileName="PoliceReport31.xsd" MetadataType="Schema" ID="2441a01d-3048-45b7-b64b-f6a80f564cd6" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?xsd=xsd3" />
+    <MetadataFile FileName="PoliceReport1.disco" MetadataType="Disco" ID="a60ead95-3b56-451f-9f98-c3514defb7d5" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?disco" />
+    <MetadataFile FileName="PoliceReport32.xsd" MetadataType="Schema" ID="820244ff-f7ab-4141-99e9-4ed1f75d2a72" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?xsd=xsd0" />
+    <MetadataFile FileName="PoliceReport1.wsdl" MetadataType="Wsdl" ID="a1d73aeb-b1ff-401f-8506-c9335ce447b2" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SqlPoliceReportService1.wsdl" MetadataType="Wsdl" ID="071192fd-bfc4-414b-9653-00ea88175fc4" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?wsdl" />
+    <MetadataFile FileName="PoliceReport33.xsd" MetadataType="Schema" ID="8c31bed4-bb08-4add-8bd5-97d291e75e98" SourceId="1" SourceUrl="http://localhost:55608/PoliceReport.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

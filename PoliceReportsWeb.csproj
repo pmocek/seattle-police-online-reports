@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4496623D-3481-4AD4-96AA-29498807964E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seattle.DoIT.PoliceReports.Web</RootNamespace>
+    <AssemblyName>Seattle.DoIT.PoliceReports.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PoliceReportServices\PoliceReport1.wsdl" />
+    <None Include="Service References\PoliceReportServices\PoliceReport3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoliceReportServices\PoliceReport31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoliceReportServices\PoliceReport32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoliceReportServices\PoliceReport33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoliceReportServices\SqlPoliceReportService1.wsdl" />
+    <None Include="Service References\SsoServices\BasicProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SsoServices\BasicProfile1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SsoServices\Seattle.DoIT.PoliceReports.Web.SsoServices.BasicProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SsoServices\SingleSignOnProfileService.wsdl" />
+    <None Include="Service References\UserProfileServices\Seattle.DoIT.PoliceReports.Web.UserProfileServices.UserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserProfileServices\UserProfile.disco" />
+    <None Include="Service References\UserProfileServices\configuration91.svcinfo" />
+    <None Include="Service References\UserProfileServices\configuration.svcinfo" />
+    <None Include="Service References\UserProfileServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PoliceReportServices\PoliceReport1.disco" />
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="Error.aspx" />
+    <None Include="Service References\SsoServices\BasicProfile.disco" />
+    <None Include="Service References\SsoServices\configuration91.svcinfo" />
+    <None Include="Service References\SsoServices\configuration.svcinfo" />
+    <None Include="Service References\SsoServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UserRegistration.aspx" />
+    <Content Include="Web.config" />
+    <None Include="Service References\UserProfileServices\UserProfile1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SsoBasicProfileServiceFactory.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SsoServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SiteNavigator.cs" />
+    <Compile Include="SearchResultCountMessageFactory.cs" />
+    <Compile Include="Master\Basic.Master.cs">
+      <DependentUpon>Basic.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Basic.Master.designer.cs">
+      <DependentUpon>Basic.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PoliceReport.Master.cs">
+      <DependentUpon>PoliceReport.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\PoliceReport.Master.designer.cs">
+      <DependentUpon>PoliceReport.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceReport.ashx.cs">
+      <DependentUpon>PoliceReport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceReportNotFound.aspx.cs">
+      <DependentUpon>PoliceReportNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceReportNotFound.aspx.designer.cs">
+      <DependentUpon>PoliceReportNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceReportServiceFactory.cs" />
+    <Compile Include="PoliceReportSummaryQueryFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PoliceReportSummaryQuerySettings.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecuredPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service References\PoliceReportServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserProfileServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileFactory.cs" />
+    <Compile Include="UserProfileServiceFactory.cs" />
+    <Compile Include="UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="images\Dots170.gif" />
+    <Content Include="Master\PoliceReport.Master" />
+    <Content Include="scripts\jquery.treeview.js" />
+    <Content Include="scripts\jquery.treeview.min.js" />
+    <Content Include="scripts\jquery.treeview.pack.js" />
+    <Content Include="Search.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\jquery-ui-1.7.2.css" />
+    <Content Include="images\icon_date_picker.png" />
+    <Content Include="images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="images\smoothness\ui-icon.png" />
+    <Content Include="images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="images\smoothness\ui-tree.png" />
+    <Content Include="images\ui-tree.png" />
+    <Content Include="scripts\jquery-1.4.2.js" />
+    <Content Include="scripts\jquery-1.4.2.min.js" />
+    <Content Include="scripts\jquery-ui-1.7.2.js" />
+    <Content Include="scripts\jquery-ui-1.7.2.min.js" />
+    <Content Include="scripts\jquery.cookie.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PoliceReport.ashx" />
+    <Content Include="PoliceReportNotFound.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Basic.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="css\PoliceReports.css" />
+    <Content Include="images\search.png" />
+    <None Include="Service References\PoliceReportServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PoliceReportServices\configuration.svcinfo" />
+    <None Include="Service References\PoliceReportServices\configuration91.svcinfo" />
+    <None Include="Service References\UserProfileServices\SqlUserProfileService.wsdl" />
+    <None Include="Service References\UserProfileServices\UserProfile.wsdl" />
+    <None Include="Service References\UserProfileServices\UserProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PoliceReportServices\" />
+    <WCFMetadataStorage Include="Service References\SsoServices\" />
+    <WCFMetadataStorage Include="Service References\UserProfileServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PoliceReportServices\Seattle.DoIT.PoliceReports.Web.PoliceReportServices.PoliceReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PoliceReportServices\Seattle.DoIT.PoliceReports.Web.PoliceReportServices.PoliceReportSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>31457</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

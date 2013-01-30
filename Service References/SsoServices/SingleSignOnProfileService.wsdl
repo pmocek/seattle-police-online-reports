@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.seattle.gov/DoIT/SSO/2009/06/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SingleSignOnProfileService" targetNamespace="http://www.seattle.gov/DoIT/SSO/2009/06/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_BasicProfileService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.seattle.gov/DoIT/SSO/2009/06/Imports">
+*** REDACTED ***
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BasicProfileService_GetByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByUserName" />
+  </wsdl:message>
+  <wsdl:message name="BasicProfileService_GetByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="BasicProfileService_GetByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByEmail" />
+  </wsdl:message>
+  <wsdl:message name="BasicProfileService_GetByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BasicProfileService">
+    <wsdl:operation name="GetByUserName">
+      <wsdl:input wsaw:Action="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByUserName" message="tns:BasicProfileService_GetByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByUserNameResponse" message="tns:BasicProfileService_GetByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByEmail">
+      <wsdl:input wsaw:Action="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByEmail" message="tns:BasicProfileService_GetByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByEmailResponse" message="tns:BasicProfileService_GetByEmail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_BasicProfileService" type="tns:BasicProfileService">
+    <wsp:PolicyReference URI="#WSHttpBinding_BasicProfileService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetByUserName">
+      <soap12:operation soapAction="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByEmail">
+      <soap12:operation soapAction="http://www.seattle.gov/DoIT/SSO/2009/06/BasicProfileService/GetByEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SingleSignOnProfileService">
+    <wsdl:port name="WSHttpBinding_BasicProfileService" binding="tns:WSHttpBinding_BasicProfileService">
+*** REDACTED ***
+       <wsa10:EndpointReference>
+*** REDACTED ***
+       </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

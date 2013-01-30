@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" elementFormDefault="qualified" targetNamespace="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55608/PoliceReport.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="PoliceReportSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GoNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OccurrenceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OffenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoliceReportSummary" nillable="true" type="tns:PoliceReportSummary" />
+  <xs:complexType name="PoliceReportSummaryQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OccurrenceEndDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OccurrenceStartDateTime" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OffenseCodeFilter" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoliceReportSummaryQuery" nillable="true" type="tns:PoliceReportSummaryQuery" />
+  <xs:complexType name="ArrayOfPoliceReportSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PoliceReportSummary" nillable="true" type="tns:PoliceReportSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPoliceReportSummary" nillable="true" type="tns:ArrayOfPoliceReportSummary" />
+  <xs:complexType name="PoliceReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="GoNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoliceReport" nillable="true" type="tns:PoliceReport" />
+</xs:schema>

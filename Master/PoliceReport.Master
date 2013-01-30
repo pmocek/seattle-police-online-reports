@@ -1,0 +1,140 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PoliceReport.Master.cs" Inherits="Seattle.DoIT.PoliceReports.Web.Master.PoliceReport" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <meta http-equiv="PRAGMA" content="NO-CACHE" />
+   <meta name="Keywords" content="Seattle Police Department, SPD, Police, SPD, Seattle, City of Seattle, Washington, seattle.gov/police, law enforcement" />
+   <meta name="target" content="police, seattle police department, spd, SPD" />
+   <meta name="title" content="Seattle Police Department's Official Web Site" />
+   <meta name="description" content="Welcome to the Seattle Police Department" />
+   <meta name="originatorJurisdiction" content="Seattle Police Department, Seattle, Washington USA" />
+   <meta name="originatorDepartment" content="Seattle Police Department" />
+   <meta name="originatorOffice" content="Administration, Police Headquarters" />
+   <meta name="createDate" content="2003" />
+   <meta name="timePeriodTextual" content="current" />
+   <meta name="medium" content="website" />
+   <meta name="govType" content="city" />
+   <meta name="subjects" content="Law Enforcement, Municipal Government; Police Agencies and Departments" />
+   <meta name="contactName" content="SPDwebservices" />
+   <meta name="contactOrganization" content="City of Seattle, Seattle Police Department" />
+   <meta name="contactNetworkAddress" content="spdwebservices@seattle.gov" />
+   <meta name="accessConstraints" content="none" />
+   <meta name="retentionPerioddate" content="2003" />
+   <title>Seattle Police > Online Police Reports</title>
+   <link rel="stylesheet" href="/Common/css/Common.css" type="text/css" />
+   <link rel="stylesheet" href="/Common/css/MayoralDept.css" type="text/css" />
+   <link rel="stylesheet" href="/Common/dept/spd/css/dept_style.css" type="text/css" />
+   <link rel="stylesheet" href="/Common/dept/spd/css/main.css" type="text/css" />
+   <link rel="stylesheet" href="../css/jquery-ui-1.7.2.css" type="text/css" />
+   <link rel="stylesheet" href="../css/PoliceReports.css" type="text/css" />
+
+   <script type="text/javascript">
+      LOC = "SPDreports"
+   </script>
+
+   <script type="text/javascript" src="/Common/dept/spd/scripts/police_array.js"></script>
+   <script type="text/javascript" src="/Common/dept/spd/scripts/navigation.js"></script>   
+	<script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery-1.4.2.min.js") %>"></script>
+	<script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery-ui-1.7.2.min.js") %>"></script>
+   <script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery.treeview.min.js") %>"></script>
+   <script type="text/javascript">
+      $(function() {
+         $("#GoSearchSubmitLink").click(function() {
+            var $goSearchField = $("#GoSearchField");
+            var goNumber = $goSearchField.val();
+            if (/^\s*[0-9]{4}\s*-?\s*[0-9]+\s*$/.test(goNumber) == false) {
+               this.href = "";
+               alert("Invalid GO Number");
+            }
+            else {
+               this.href = "PoliceReport.ashx?go=" + goNumber.replace(/[\s+,-]/g, "");
+               window.open(this.href, "PoliceReport" + goNumber);
+            }
+            return false;
+         });
+      });
+   </script>
+   <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+   </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+      <div class="mainFormContent">
+         <!-- City Header BEGIN -->
+         <!--#include virtual="/Common/inc/seattle_header.inc"-->
+         <!-- City Header END -->
+         <!-- Department Header BEGIN -->
+         <!--#include virtual="/Common/dept/SPD/inc/dept_header.inc"-->
+         <!-- Department Header END -->
+         <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+               <td width="191" valign="top" bgcolor="#DADADA" style="color: #666666">
+                  <br />
+                  <fieldset>
+                     <legend class="download">Search by (GO) Number</legend>
+                     <p class="caption">
+                        If you were given a GO Number, it will start with the YEAR followed by the number:</p>
+                     <div>
+                        <label>
+                           <span class="inlink">GO Number:</span>
+                           <input id="GoSearchField" type="text" name="GoSearchField"/>
+                        </label>
+                        <div style="text-align: center; padding-top:5px">
+                           <a id="GoSearchSubmitLink" href="" target="blank"><img class="SearchButton" src="<%= Page.ResolveUrl("~/images/search.png") %>" alt="GO Search Button" /></a>
+                        </div>
+                     </div>
+                  </fieldset>
+                  <br />
+                  <fieldset>
+                     <legend class="download">Public Disclosure<br /></legend>
+                     <p class="caption">
+                        If you cannot find the report you are looking for, or if the report you are looking
+                        for is not one of the available offenses, you can make a <a href="http://www.seattle.gov/police/records/PublicDisclosure.htm" target="_blank"> disclosure request</a>.
+                     </p>
+                  </fieldset>
+                  <br />
+                  <fieldset>
+                     <legend class="download">Disclaimer<br /></legend>
+                     <p class="caption">
+                        The reports of crimes provided here are  initial incident reports and are subject to change as the 
+                        investigation proceeds.  The Seattle Police Department cautions against using police reports to 
+                        represent the safety of an area.
+                     </p>
+                  </fieldset>
+                  <p class="subdivision">
+                  </p>
+               </td>
+               <td width="584" valign="top" style="padding: 10px;">
+                  <div style="float:right">
+                     <asp:LinkButton ID="SignOutButton" runat="server" onclick="SignOutButton_Click">Sign Out</asp:LinkButton>
+                  </div>
+                  <p class="headline">
+                     Online Police Reports
+                  </p>
+                  <p class="sm_black">
+                     General Offense (GO) Reports in PDF format are available for all <span class="sm_red" style="padding-right: 0px">
+                        <br />
+                        Burglaries, Robberies, Aggravated Assaults and Homicides</span>.
+                  </p>
+                  <p class="sm_black">
+                  These reports recount initial descriptions of crime incidents.  Reports are edited only to protect privacy of the individuals involved.   
+                  Dialog that may be quoted and event descriptions included in some reports may not be appropriate for all viewers. <a href="http://www.seattle.gov/police/records/PoliceReportsFAQ.htm" target="_blank">Frequently asked questions</a> about these reports.
+                  </p>
+                  <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                  </asp:ContentPlaceHolder>
+               </td>
+            </tr>
+         </table>
+         <!--end BODY TABLE-->
+         <!-- Department Footer BEGIN -->
+         <!--#include virtual="/Common/dept/spd/inc/dept_footer.inc"-->
+         <!-- Department Header END -->
+         <!-- City Footer BEGIN -->
+         <!--#include virtual="/Common/inc/seattle_footer.inc"-->
+         <!-- City Header END -->
+      </div>
+   </form>
+</body>
+</html>

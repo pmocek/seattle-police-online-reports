@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.seattle.gov/DoIT/SPD/Services/2010/05/" elementFormDefault="qualified" targetNamespace="http://www.seattle.gov/DoIT/SPD/Services/2010/05/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55608/PoliceReport.svc?xsd=xsd2" namespace="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" />
+  <xs:element name="GetReportSummaryByGoNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="go" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportSummaryByGoNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="GetReportSummaryByGoNumberResult" nillable="true" type="q1:PoliceReportSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportSummariesByQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="query" nillable="true" type="q2:PoliceReportSummaryQuery" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportSummariesByQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="GetReportSummariesByQueryResult" nillable="true" type="q3:ArrayOfPoliceReportSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requesterUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="GetReportByIdResult" nillable="true" type="q4:PoliceReport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportByGoNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requesterUserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="go" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportByGoNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="GetReportByGoNumberResult" nillable="true" type="q5:PoliceReport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMostRecentSummaries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMostRecentSummariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://www.seattle.gov/DoIT/SPD/Services/2010/02/" minOccurs="0" name="GetMostRecentSummariesResult" nillable="true" type="q6:ArrayOfPoliceReportSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

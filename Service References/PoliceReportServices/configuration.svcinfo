@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+*** REDACTED ***
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:55608/PoliceReport.svc&quot; binding=&quot;wsHttpBinding&quot; bindingConfiguration=&quot;WSHttpBinding_PoliceReportService&quot; contract=&quot;PoliceReportServices.PoliceReportService&quot; name=&quot;WSHttpBinding_PoliceReportService&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:55608/PoliceReport.svc&quot; binding=&quot;wsHttpBinding&quot; bindingConfiguration=&quot;WSHttpBinding_PoliceReportService&quot; contract=&quot;PoliceReportServices.PoliceReportService&quot; name=&quot;WSHttpBinding_PoliceReportService&quot; /&gt;" contractName="PoliceReportServices.PoliceReportService" name="WSHttpBinding_PoliceReportService" />
+  </endpoints>
+</configurationSnapshot>
