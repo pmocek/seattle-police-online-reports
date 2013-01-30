@@ -11,6 +11,20 @@ the Seattle Police Department's Online Police Reports Web application from the
 Department of Information Technology.  Attached is a copy of the source code
 with redactions made in accordance with [RCW 42.56.420(4)][2]."
 
+Those redactions appear to be indicated by the text "** REDACTED **" which
+appears in the following files:
+
+  * Service References/SsoServices/BasicProfile.disco
+  * Service References/SsoServices/SingleSignOnProfileService.wsdl
+  * Service References/SsoServices/Reference.svcmap
+  * Service References/SsoServices/configuration91.svcinfo
+  * Service References/SsoServices/configuration.svcinfo
+  * Service References/UserProfileServices/configuration91.svcinfo
+  * Service References/UserProfileServices/configuration.svcinfo
+  * Service References/PoliceReportServices/configuration91.svcinfo
+  * Service References/PoliceReportServices/configuration.svcinfo
+  * Web.config
+
 
  [1]: <http://www.seattle.gov/police/records/>
       (Seattle Police Department: View Police Reports Online)
