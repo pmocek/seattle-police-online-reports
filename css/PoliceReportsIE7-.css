@@ -1,0 +1,18 @@
+﻿fieldset
+{
+   margin-left: 2px;
+   margin-right: 2px;
+}
+fieldset p, fieldset ul
+{
+   margin-top: 1em;
+   margin-bottom: 1em;
+}
+#helpLinks
+{
+   margin-left: 0px;
+}
+#helpLinks li
+{
+   margin-bottom: 0px;
+}

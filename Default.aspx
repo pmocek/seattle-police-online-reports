@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="City of Seattle Online Police Reports" Language="C#" MasterPageFile="~/Master/PoliceReport.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Seattle.DoIT.PoliceReports.Web._Default" %>
 <asp:Content id="HeadContent" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
 	<script type="text/javascript">
-	   $(function() {
+	   $(function () {
 	      $("#ReportSearchTabs").tabs({
-	         select: function(event, ui) {
+	         select: function (event, ui) {
 	            var url = $.data(ui.tab, "load.tabs");
 	            if (url) {
 	               location.href = url;
@@ -12,9 +12,29 @@
 	            return true;
 	         }
 	      });
-	      $("#MostRecentReportsTree").treeview({ collapsed: true, animated: "fast", persist: "location" });
+      });
+      $(function() {
+	      if (treeData != null) {
+	         $(function () {
+	            var tree = $('#MostRecentReportsTree').jstree({
+	               'core': {
+	                  'animation': 200
+	               },
+	               'themes': {
+	                  'theme': 'default',
+	                  'dots': false,
+	                  'icons': false
+	               },
+	               'json_data': treeData,
+	               'plugins': ['themes', 'types', 'json_data', 'seaui']
+	            });
+	         });
+	      }
 	   });		
 	</script>
+   <style type="text/css">
+      .jstree a:hover { text-decoration: underline !important; }
+   </style>
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
    <div id="ReportSearchTabs">
@@ -23,44 +43,9 @@
          <li><a href="Search.aspx">SEARCH</a> </li>
       </ul>
       <div id="MostRecentReportsTab">
+         <p>Most recently reported offenses:</p>
          <p id="NoReportsFoundMessage" runat="server">No offenses found.</p>
-         <asp:Repeater id="MostRecentReportsRepeater" runat="server" Visible="false">
-            <HeaderTemplate>
-               <ul id="MostRecentReportsTree" class="med_blue" style="margin: 1em 0px">
-            </HeaderTemplate>
-            <ItemTemplate>
-               <li>
-                  <span><%# DataBinder.Eval(Container.DataItem, "ReportedDate")%></span>
-                  <asp:Repeater id="OffenseTypeRepeater" runat="server" DataSource='<%# DataBinder.Eval(Container.DataItem, "Offenses") %>'>
-                     <HeaderTemplate>
-                        <ul>
-                     </HeaderTemplate>
-                     <ItemTemplate>
-                        <li>
-                           <span><%# DataBinder.Eval(Container.DataItem, "Offense")%></span>
-                           <asp:Repeater id="ReportLinkRepeater" runat="server" DataSource='<%# DataBinder.Eval(Container.DataItem, "Reports") %>'>
-                              <HeaderTemplate>
-                                 <ul>
-                              </HeaderTemplate>
-                              <ItemTemplate>
-                                    <li><a class="med_blue" href='<%# DataBinder.Eval(Container.DataItem, "GoNumber", "PoliceReport.ashx?go={0}") %>' target="_blank"><%# Server.HtmlEncode(DataBinder.Eval(Container.DataItem, "Name").ToString()) %></a></li>
-                              </ItemTemplate>
-                              <FooterTemplate>
-                                 </ul>  
-                              </FooterTemplate>
-                           </asp:Repeater>
-                        </li>
-                     </ItemTemplate>
-                     <FooterTemplate>
-                        </ul>  
-                     </FooterTemplate>
-                  </asp:Repeater>
-               </li>
-            </ItemTemplate>
-            <FooterTemplate>
-               </ul>  
-            </FooterTemplate>
-         </asp:Repeater>
+         <div id="MostRecentReportsTree" class="med_blue"></div>
       </div>
    </div>
 </asp:Content>

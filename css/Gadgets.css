@@ -1,0 +1,45 @@
+﻿
+BODY
+{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+.panelTitleBar
+{
+   width:100%;
+   background-color: #D8EFF6;
+   height:25px;
+   font-weight:bold;
+}
+.panelTitle
+{
+   float:left;
+   margin:5px;
+}
+.panelTitleButtonContainer
+{
+   float: right;
+   margin:5px;  
+}
+.panelTitleButtonContainer > a
+{
+   color: #000000;
+}
+.panelContent
+{
+   padding:5px;
+}
+
+.jstree a { color: black; text-decoration: none }
+.jstree a:hover { text-decoration: underline }
+.helpLinks li
+{
+   list-style-type: none;
+   /*
+   padding-left: 1em;
+   text-indent: -1em;
+   */
+}

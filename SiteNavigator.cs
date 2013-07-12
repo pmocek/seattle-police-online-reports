@@ -11,6 +11,9 @@ namespace Seattle.DoIT.PoliceReports.Web
       private static string _userRegistrationUrl = "~/UserRegistration.aspx";
       private static string _accessDeniedUrl = "~/AccessDenied.aspx";
       private static string _policeReportNotFoundUrl = "~/PoliceReportNotFound.aspx";
+      private static string _userRegistrationGadgetUrl = "~/gadgets/UserRegistrationGadget.aspx";
+      private static string _signInRequiredGadgetUrl = "~/gadgets/SignInRequired.aspx";
+      private static string _accessRevokedGadgetUrl = "~/gadgets/AccessRevoked.aspx";
 
       private SiteNavigator() { }
 
@@ -69,6 +72,31 @@ namespace Seattle.DoIT.PoliceReports.Web
       public static void RedirectToAccessDeniedPage()
       {
          Redirect(_accessDeniedUrl);
+      }
+
+      private static string GetUserRegistrationGadgetUrlWithDestination(string destUrl)
+      {
+         return _userRegistrationGadgetUrl + "?dest=" + HttpContext.Current.Server.UrlEncode(destUrl);
+      }
+
+      public static void RedirectToUserRegistrationGadgetPage(string destUrl)
+      {
+         Redirect(GetUserRegistrationGadgetUrlWithDestination(destUrl));
+      }
+
+      public static void TransferToUserRegistrationGadgetPage(string destUrl)
+      {
+         Transfer(GetUserRegistrationGadgetUrlWithDestination(destUrl));
+      }
+
+      public static void RedirectToAccessRevokedGadgetPage()
+      {
+         Redirect(_accessRevokedGadgetUrl);
+      }
+
+      public static void RedirectToSignInRequiredGadgetPage()
+      {
+         Redirect(_signInRequiredGadgetUrl);
       }
 
       public static void RedirectToPoliceReportNotFoundPage()

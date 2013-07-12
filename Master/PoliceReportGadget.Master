@@ -1,0 +1,43 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PoliceReportGadget.Master.cs" Inherits="Seattle.DoIT.PoliceReports.Web.Master.PoliceReportGadget" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <meta http-equiv="PRAGMA" content="NO-CACHE" />
+   <meta name="Keywords" content="Seattle Police Department, SPD, Police, SPD, Seattle, City of Seattle, Washington, seattle.gov/police, law enforcement" />
+   <meta name="target" content="police, seattle police department, spd, SPD" />
+   <meta name="title" content="Seattle Police Department's Official Web Site" />
+   <meta name="description" content="Welcome to the Seattle Police Department" />
+   <meta name="originatorJurisdiction" content="Seattle Police Department, Seattle, Washington USA" />
+   <meta name="originatorDepartment" content="Seattle Police Department" />
+   <meta name="originatorOffice" content="Administration, Police Headquarters" />
+   <meta name="createDate" content="2003" />
+   <meta name="timePeriodTextual" content="current" />
+   <meta name="medium" content="website" />
+   <meta name="govType" content="city" />
+   <meta name="subjects" content="Law Enforcement, Municipal Government; Police Agencies and Departments" />
+   <meta name="contactName" content="SPDwebservices" />
+   <meta name="contactOrganization" content="City of Seattle, Seattle Police Department" />
+   <meta name="contactNetworkAddress" content="spdwebservices@seattle.gov" />
+   <meta name="accessConstraints" content="none" />
+   <meta name="retentionPerioddate" content="2003" />
+   <title>Seattle Police > Online Police Reports</title>
+   <link rel="stylesheet" href="../css/jquery-ui-1.7.2.css" type="text/css" />
+   <link rel="stylesheet" href="../css/Gadgets.css" type="text/css" />
+
+	<script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery-1.4.2.min.js") %>"></script>
+	<script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery-ui-1.7.2.min.js") %>"></script>
+   <script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jquery.treeview.min.js") %>"></script>
+   <script type="text/javascript" src="<%= Page.ResolveUrl("~/scripts/jstree/jquery.jstree.js") %>"></script>
+   <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+   </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="PoliceReportsForm" runat="server">
+      <div class="mainFormContent">
+         <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+      </div>
+   </form>
+</body>
+</html>

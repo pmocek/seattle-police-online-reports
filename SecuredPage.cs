@@ -47,30 +47,6 @@ namespace Seattle.DoIT.PoliceReports.Web.UI
          }
       }
 
-      /*
-      private void RedirectToDeactivatedUserPage()
-      {
-         try
-         {
-            Response.Redirect("~/DeactivatedUser.aspx");
-         }
-         catch (System.Threading.ThreadAbortException)
-         {
-         }
-      }
-
-      private void RedirectToUserRegistrationPage()
-      {
-         try
-         {
-            Response.Redirect("~/UserRegistration.aspx");
-         }
-         catch (System.Threading.ThreadAbortException)
-         {
-         }
-      }
-      */
-
       protected void SignOut()
       {
          FormsAuthentication.SignOut();

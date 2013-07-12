@@ -1,9 +1,16 @@
-﻿body
+﻿
+body
 {
     margin: 0px 0px;
-    background-image: /Common/images/seattle_back;
+    background-image:  url(/SeattleCommon/images/greyBack.gif);
     background-repeat: repeat;
     color:#000000;
+}
+
+fieldset
+{
+   padding-left: 0px;
+   padding-right: 0px;
 }
 
 div.mainFormContent
@@ -14,55 +21,6 @@ div.mainFormContent
    margin-right:auto;
 }
 
-.treeview, .treeview ul { 
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.treeview ul {
-	margin-top: 4px;
-}
-
-.treeview .hitarea 
-{
-	background: url(../images/ui-tree.png) 0 0 no-repeat;
-	height: 16px;
-	width: 16px;
-	margin-left: -16px;
-	float: left;
-	cursor: pointer;
-}
-/* fix for IE6 */
-* html .hitarea {
-	display: inline;
-	float:none;
-}
-
-.treeview li { 
-	margin: 0;
-	padding: 3px 0pt 3px 16px;
-}
-.treeview .expandable-hitarea, .treeview div.lastExpandable-hitarea {
-    background-position: 0 0; 
-}
-.treeview .collapsable-hitarea, .treeview div.lastCollapsable-hitarea  {
-   background-position: 0 -16px; 
-}
-.treeview .hover 
-{
-   text-decoration: underline;
-    /*color: black; */
-    cursor: pointer; 
-}
-.treeview a 
-{
-   text-decoration: none; 
-}
-.treeview a.selected {
-   
-}
-
 .ui-tabs
 {
    border: none;
@@ -71,27 +29,8 @@ div.mainFormContent
 .ui-tabs .ui-tabs-panel
 {
    border: 1px solid #AAAAAA;
-   margin-left: 3px;
+   margin-left: 2px;
    min-height: 300px;
-
-   /*border-width: 1px;*/
-}
-
-.ui-tabs .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
-/*
-   color:#336699;
-   font-size:11px;
-   font-weight:bold;
-*/
-}
-
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited 
-{
-/*
-   color:#336699;
-   font-size:11px;
-   font-weight:bold;
-*/
 }
 
 .ui-tabs .ui-widget-header 
@@ -128,6 +67,7 @@ ul.SearchResults
 {
    list-style: none;
    margin-left:0px;
+   padding-left:5px;
 }
 ul.SearchResults a
 {
@@ -143,13 +83,32 @@ ul.SearchResults a:hover
    white-space: nowrap;
    padding-right: 2ex;
 }
+.gosearch label, .gosearch input, .gosearch a
+{
+   display: block;
+}
 #GoSearchField
 {
-   width: 160px;
+   width: 165px;
+   margin-left: 5pt;
+}
+#GoSearchSubmitLink
+{
+   text-align: center;
+   margin-top: .5em;
+   margin-bottom: .5em;
 }
 img.SearchButton
 {
    border: none;
    width: 96px;
    height: 27px;
+}
+.jstree-default.jstree-focused {
+   background:none repeat scroll 0 0 #FFFFFF;
+}
+#helpLinks li
+{
+   list-style-type: none;
+   margin-bottom: .2em;
 }

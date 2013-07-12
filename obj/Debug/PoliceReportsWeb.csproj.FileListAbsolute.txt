@@ -1,0 +1,4 @@
+E:\Temp\SPDMediaReleases\PoliceReportsWeb\bin\Seattle.DoIT.PoliceReports.Web.dll
+E:\Temp\SPDMediaReleases\PoliceReportsWeb\bin\Seattle.DoIT.PoliceReports.Web.pdb
+E:\Temp\SPDMediaReleases\PoliceReportsWeb\obj\Debug\Seattle.DoIT.PoliceReports.Web.dll
+E:\Temp\SPDMediaReleases\PoliceReportsWeb\obj\Debug\Seattle.DoIT.PoliceReports.Web.pdb

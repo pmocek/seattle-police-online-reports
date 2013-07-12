@@ -24,16 +24,16 @@
    <meta name="accessConstraints" content="none" />
    <meta name="retentionPerioddate" content="2003" />
    <title>Seattle Police > Online Police Report Not Found</title>
-   <link rel="stylesheet" href="/Common/css/Common.css" type="text/css" />
-   <link rel="stylesheet" href="/Common/css/MayoralDept.css" type="text/css" />
-   <link rel="stylesheet" href="/Common/dept/spd/css/dept_style.css" type="text/css" />
-   <link rel="stylesheet" href="/Common/dept/spd/css/main.css" type="text/css" />
+   <link rel="stylesheet" href="/SeattleCommon/css/Common.css" type="text/css" />
+   <link rel="stylesheet" href="/SeattleCommon/css/MayoralDept.css" type="text/css" />
+   <link rel="stylesheet" href="/SeattleCommon/dept/spd/css/dept_style.css" type="text/css" />
+   <link rel="stylesheet" href="/SeattleCommon/dept/spd/css/main.css" type="text/css" />
    <link rel="stylesheet" href="../css/PoliceReports.css" type="text/css" />
    <script type="text/javascript">
       LOC = "SPDreports"
    </script>
-   <script type="text/javascript" src="/Common/dept/spd/scripts/police_array.js"></script>
-   <script type="text/javascript" src="/Common/dept/spd/scripts/navigation.js"></script>   
+   <script type="text/javascript" src="/SeattleCommon/dept/spd/scripts/police_array.js"></script>
+   <script type="text/javascript" src="/SeattleCommon/dept/spd/scripts/navigation.js"></script>   
    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
    </asp:ContentPlaceHolder>
 </head>
@@ -41,19 +41,19 @@
    <form id="form1" runat="server">
       <div class="mainFormContent">
          <!-- City Header BEGIN -->
-         <!--#include virtual="/Common/inc/seattle_header.inc"-->
+         <!--#include virtual="/SeattleCommon/inc/seattle_header.inc"-->
          <!-- City Header END -->
          <!-- Department Header BEGIN -->
-         <!--#include virtual="/Common/dept/SPD/inc/dept_header.inc"-->
+         <!--#include virtual="/SeattleCommon/dept/SPD/inc/dept_header.inc"-->
          <!-- Department Header END -->
          <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
          </asp:ContentPlaceHolder>
          <!--end BODY TABLE-->
          <!-- Department Footer BEGIN -->
-         <!--#include virtual="/Common/dept/spd/inc/dept_footer.inc"-->
+         <!--#include virtual="/SeattleCommon/dept/spd/inc/dept_footer.inc"-->
          <!-- Department Header END -->
          <!-- City Footer BEGIN -->
-         <!--#include virtual="/Common/inc/seattle_footer.inc"-->
+         <!--#include virtual="/SeattleCommon/inc/seattle_footer.inc"-->
          <!-- City Header END -->
       </div>
    </form>

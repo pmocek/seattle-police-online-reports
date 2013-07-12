@@ -17,10 +17,15 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,14 +37,53 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Integration|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Seattle.DoIT.PoliceReports.Web.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Seattle.DoIT.PoliceReports.Web.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Seattle.DoIT.PoliceReports.Web.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -74,55 +118,31 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\PoliceReportServices\PoliceReport1.wsdl" />
-    <None Include="Service References\PoliceReportServices\PoliceReport3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PoliceReportServices\PoliceReport31.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PoliceReportServices\PoliceReport32.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PoliceReportServices\PoliceReport33.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PoliceReportServices\SqlPoliceReportService1.wsdl" />
-    <None Include="Service References\SsoServices\BasicProfile.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SsoServices\BasicProfile1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SsoServices\Seattle.DoIT.PoliceReports.Web.SsoServices.BasicProfile.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\SsoServices\SingleSignOnProfileService.wsdl" />
-    <None Include="Service References\UserProfileServices\Seattle.DoIT.PoliceReports.Web.UserProfileServices.UserProfile.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\UserProfileServices\UserProfile.disco" />
-    <None Include="Service References\UserProfileServices\configuration91.svcinfo" />
-    <None Include="Service References\UserProfileServices\configuration.svcinfo" />
-    <None Include="Service References\UserProfileServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\PoliceReportServices\PoliceReport1.disco" />
+    <Content Include="css\Gadgets.css" />
+    <Content Include="css\PoliceReportsIE7-.css" />
+    <Content Include="gadgets\AccessRevoked.aspx" />
+    <Content Include="gadgets\SignInRequired.aspx" />
+    <Content Include="gadgets\Error.aspx" />
+    <Content Include="gadgets\MostRecentReportsGadget.aspx" />
+    <Content Include="gadgets\UserRegistrationGadget.aspx" />
+    <Content Include="Master\PoliceReportGadget.Master" />
+    <Content Include="Master\BasicGadget.Master" />
     <Content Include="AccessDenied.aspx" />
     <Content Include="Error.aspx" />
-    <None Include="Service References\SsoServices\BasicProfile.disco" />
-    <None Include="Service References\SsoServices\configuration91.svcinfo" />
-    <None Include="Service References\SsoServices\configuration.svcinfo" />
-    <None Include="Service References\SsoServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <Content Include="scripts\jstree\jquery.jstree.js" />
+    <Content Include="scripts\jstree\themes\apple\bg.jpg" />
+    <Content Include="scripts\jstree\themes\apple\d.png" />
+    <Content Include="scripts\jstree\themes\apple\dot_for_ie.gif" />
+    <Content Include="scripts\jstree\themes\apple\style.css" />
+    <Content Include="scripts\jstree\themes\apple\throbber.gif" />
+    <Content Include="scripts\jstree\themes\default\d.gif" />
+    <Content Include="scripts\jstree\themes\default\d.png" />
+    <Content Include="scripts\jstree\themes\default\style.css" />
+    <Content Include="scripts\jstree\themes\default\throbber.gif" />
+    <Content Include="scripts\jstree\_lib\jquery.cookie.js" />
+    <Content Include="scripts\jstree\_lib\jquery.hotkeys.js" />
+    <Content Include="scripts\jstree\_lib\jquery.js" />
     <Content Include="UserRegistration.aspx" />
-    <Content Include="Web.config" />
-    <None Include="Service References\UserProfileServices\UserProfile1.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_GlobalResources\Messages.Designer.cs">
@@ -136,6 +156,38 @@
     </Compile>
     <Compile Include="AccessDenied.aspx.designer.cs">
       <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsTreeHelper.cs" />
+    <Compile Include="SecuredGadgetPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gadgets\MostRecentReportsGadget.aspx.cs">
+      <DependentUpon>MostRecentReportsGadget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gadgets\MostRecentReportsGadget.aspx.designer.cs">
+      <DependentUpon>MostRecentReportsGadget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gadgets\UserRegistrationGadget.aspx.cs">
+      <DependentUpon>UserRegistrationGadget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gadgets\UserRegistrationGadget.aspx.designer.cs">
+      <DependentUpon>UserRegistrationGadget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\BasicGadget.Master.cs">
+      <DependentUpon>BasicGadget.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\BasicGadget.Master.designer.cs">
+      <DependentUpon>BasicGadget.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PoliceReportGadget.Master.cs">
+      <DependentUpon>PoliceReportGadget.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\PoliceReportGadget.Master.designer.cs">
+      <DependentUpon>PoliceReportGadget.Master</DependentUpon>
     </Compile>
     <Compile Include="SsoBasicProfileServiceFactory.cs" />
     <Compile Include="Default.aspx.cs">
@@ -151,11 +203,6 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\SsoServices\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="SiteNavigator.cs" />
     <Compile Include="SearchResultCountMessageFactory.cs" />
@@ -196,16 +243,6 @@
     </Compile>
     <Compile Include="SecuredPage.cs">
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Service References\PoliceReportServices\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\UserProfileServices\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="UserProfileFactory.cs" />
     <Compile Include="UserProfileServiceFactory.cs" />
@@ -259,39 +296,12 @@
     <Content Include="Master\Basic.Master" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_GlobalResources\Messages.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </Content>
     <Content Include="css\PoliceReports.css" />
     <Content Include="images\search.png" />
-    <None Include="Service References\PoliceReportServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\PoliceReportServices\configuration.svcinfo" />
-    <None Include="Service References\PoliceReportServices\configuration91.svcinfo" />
-    <None Include="Service References\UserProfileServices\SqlUserProfileService.wsdl" />
-    <None Include="Service References\UserProfileServices\UserProfile.wsdl" />
-    <None Include="Service References\UserProfileServices\UserProfile.xsd">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\PoliceReportServices\" />
-    <WCFMetadataStorage Include="Service References\SsoServices\" />
-    <WCFMetadataStorage Include="Service References\UserProfileServices\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PoliceReportServices\Seattle.DoIT.PoliceReports.Web.PoliceReportServices.PoliceReport.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\PoliceReportServices\Seattle.DoIT.PoliceReports.Web.PoliceReportServices.PoliceReportSummary.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

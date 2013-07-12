@@ -27,26 +27,21 @@
          <table id="AdvancedSearchCriteriaTable" border="0" cellpadding="1" cellspacing="1" style="text-align:left">
             <tr>
                <td>Offense:</td>
-               <td>
-                  <asp:DropDownList id="OffenseTypeDropDownList" runat="server">
+               <td colspan="2">
+                  <asp:DropDownList id="OffenseTypeDropDownList" runat="server" AppendDataBoundItems="true">
                      <asp:ListItem text="- Any -" value="0" />
-                     <asp:ListItem text="Assault" value="assault" />
-                     <asp:ListItem text="Burglary" value="burglary" />
-                     <asp:ListItem text="Homicide" value="homicide" />
-                     <asp:ListItem text="Robbery" value="robbery" />
-                     <asp:ListItem text="Theft" value="theft" />
                   </asp:DropDownList>
                </td>
             </tr>
             <tr>
-               <td>Date Range:</td>
+               <td>Occurred Date Range:</td>
                <td><asp:TextBox id="DateRange1TextBox" runat="server" maxlength="10" cssclass="DateTime" /></td>
             </tr>
             <tr>
                <td>
                </td>
                <td><asp:TextBox id="DateRange2TextBox" runat="server" maxlength="10" cssclass="DateTime" /></td>
-               <td><asp:Button id="SearchButton" runat="server" text="Search" OnClick="SearchButton_Click" /></td>
+               <td style="text-align:right"><asp:Button id="SearchButton" runat="server" text="Search" OnClick="SearchButton_Click" /></td>
             </tr>
          </table>
          <hr />
@@ -61,7 +56,7 @@
                <ul class="med_blue SearchResults">
             </HeaderTemplate>
             <ItemTemplate>
-               <li><a class="med_blue" href='<%# DataBinder.Eval(Container.DataItem, "GoNumber", "PoliceReport.ashx?go={0}") %>' target="_blank"><%# Server.HtmlEncode(DataBinder.Eval(Container.DataItem, "Name").ToString()) %></a></li>
+               <li><a class="med_blue" href='<%# DataBinder.Eval(Container.DataItem, "GoNumber", "PoliceReport.ashx?go={0}") %>' target="_blank"><%# Server.HtmlEncode(((Seattle.DoIT.PoliceReports.Web.Search)Page).FormatReportDescription((Seattle.DoIT.PoliceReports.Web.PoliceReportServices.PoliceReportSummary)Container.DataItem))%></a></li>
             </ItemTemplate>
             <FooterTemplate>
                </ul>
