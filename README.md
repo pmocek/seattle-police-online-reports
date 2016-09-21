@@ -46,7 +46,7 @@ appears in the following files:
   * Web.config
 
 
- [1]: <http://www.seattle.gov/police/records/>
+ [1]: <https://www.seattle.gov/police/records/>
       (Seattle Police Department: View Police Reports Online)
  [2]: <http://apps.leg.wa.gov/rcw/default.aspx?cite=42.56.420>
       (RCW Title 42 > Chapter 42.56 > Section 42.56.420: Security)
